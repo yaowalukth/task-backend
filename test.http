@@ -1,0 +1,35 @@
+### 1. ทดสอบสร้างงาน
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "title": "เขียนโค้ดด้วย Mongoose"
+}
+
+### ข้อ 11 สมัครสมาชิก
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password123"
+}
+
+### ข้อ 12 ล็อกอิน
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password123"
+}
+
+### 2. ทดสอบดึงข้อมูล (ก๊อปปี้ _id จากตรงนี้)
+GET http://localhost:3000/tasks
+
+### 3. ทดสอบแก้ไข (เอา _id มาต่อท้าย URL)
+PUT http://localhost:3000/tasks/6ac3913e55bddae97030c585
+
+### 4. ทดสอบลบ (เอา _id มาต่อท้าย URL)
+DELETE http://localhost:3000/tasks/6ac3913e55bddae97030c585
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYzllMTdmMGQyOWFiMDFmMDk4Y2RlYiIsImlhdCI6MTc5MTYxNTk1OSwiZXhwIjoxNzkxNjE5NTU5fQ.Sza9Jbrfy31gUTn3INXqZ86yzmAQ2zo70NpVMeGHU-g
